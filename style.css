@@ -1,94 +1,58 @@
-@import url("https://fonts.googleapis.com/css?family=Aleo");
 
-:root {
-  font-family: "Aleo", sans-serif;
-}
 
-html,
 body {
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  background: rgb(119, 13, 13);
-  background: radial-gradient(
-    circle,
-    rgba(119, 13, 13, 0.92) 64%,
-    rgba(0, 0, 0, 0.6) 100%
-  );
+    font-family: 'Courier New', serif;
+    /* background-image: url('https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'); 用一个柔和的背景图片 */
+    /* background-size: cover; */
+    /* background-position: center; */
+    background-color: #FFF9F9; /* 统一的粉白色背景 */
+    color: #663333; /* 浪漫的深棕色文字 */
 }
 
 h1 {
-  position: absolute;
-  margin-top: 30vh;
-  width: 100%;
-  text-align: center;
-  font-size: 999%;
-  font-family: sans-serif;
-  color: rgb(255, 255, 0);
-  opacity: 0.5;
+    text-align: center;
+    font-weight: 300;
+    color: #ff7f7f; /* 浅粉色标题 */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5); /* 添加轻微阴影 */
 }
 
-canvas {
-  width: 100%;
-  height: 100%;
+#noteForm {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* 半透明白色背景，让背景图片透过来 */
 }
 
-/* Thanks Traversy Media for this text background animation tut:
-   https://www.youtube.com/watch?v=lX5LZTWc4f8&t
-*/
-.label {
-  font-size: 2.2rem;
-  background: url("https://res.cloudinary.com/nikita-rudenko/image/upload/v1544906837/stripe_c982eebe592d6c30f2034f5ce80b1fc6.png");
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  animation: moveBg 30s linear infinite;
+#noteTitle, #noteContent {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ffcccc; /* 浅粉色边框 */
+    background-color: #fff9f9; /* 浅浅的粉色背景 */
 }
 
-@keyframes moveBg {
-  0% {
-    background-position: 0% 30%;
-  }
-  100% {
-    background-position: 1000% 500%;
-  }
+#notesList {
+    border: 1px solid #ffcccc;
+    padding: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
 }
 
-.middle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  user-select: none;
+.note {
+    border-bottom: 1px dashed #ff7f7f; /* 浅粉色虚线分隔符 */
+    padding: 10px 0;
+    margin-bottom: 10px;
 }
 
-.time {
-  color: #d99c3b;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: center;
+.btn-primary {
+    background-color: #ff7f7f;
+    border-color: #ff4d4d;
 }
 
-.time span {
-  padding: 0 14px;
-  font-size: 0.8rem;
-}
-
-.time span div {
-  font-size: 3rem;
-}
-
-@media (max-width: 740px) {
-  .label {
-    font-size: 1.7rem;
-  }
-  .time span {
-    padding: 0 16px;
-    font-size: 0.6rem;
-  }
-  .time span div {
-    font-size: 2rem;
-  }
+.btn-primary:hover {
+    background-color: #ff4d4d;
 }
